@@ -127,7 +127,7 @@
             function constructor() {
                 // Be kind to people forgetting new
                 if (!(this instanceof constructor)) {
-                    throw new Error("Please use 'new' when initializing Stapes classes");
+                    throw new Error("Please use 'new' when initializing Elesenva classes");
                 }
 
                 // If this class has events add a GUID as well
@@ -350,7 +350,7 @@
         updateAttribute : function(key, fn, silent) {
             var item = this.get(key);
 
-            // In previous versions of Stapes we didn't have the check for object,
+            // In previous versions of Elesenva we didn't have the check for object,
             // but still this worked. In 0.7.0 it suddenly doesn't work anymore and
             // we need the check. Why? I have no clue.
             var type = _.typeOf(item);
@@ -364,7 +364,7 @@
         }
     };
 
-    // Can be mixed in later using Stapes.mixinEvents(object);
+    // Can be mixed in later using Elesenva.mixinEvents(object);
     var Events = {
         emit : function(types, data) {
             data = (typeof data === "undefined") ? null : data;
@@ -561,7 +561,7 @@
         }
     };
 
-    var Stapes = {
+    var Elesenva = {
         "_" : _, // private helper functions and properties
 
         "extend" : function() {
@@ -595,16 +595,16 @@
     if (typeof exports !== "undefined") {
         // Server
         if (typeof module !== "undefined" && module.exports) {
-            exports = module.exports = Stapes;
+            exports = module.exports = Elesenva;
         }
-        exports.Stapes = Stapes;
+        exports.Elesenva = Elesenva;
     } else if (typeof define === "function" && define.amd) {
         // AMD
         define(function() {
-            return Stapes;
+            return Elesenva;
         });
     } else {
         // Global scope
-        window.Stapes = Stapes;
+        window.Elesenva = Elesenva;
     }
 })();
