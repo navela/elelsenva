@@ -10,7 +10,6 @@
 
     var VERSION = "0.1.1";
 
-    // Global counter for all events in all modules (including mixed in objects)
     var guid = 1;
 
     // Makes _.create() faster
@@ -21,8 +20,6 @@
     // So we can use slice.call for arguments later on
     var slice = Array.prototype.slice;
 
-    // Private attributes and helper functions, stored in an object so they
-    // are overwritable by plugins
     var _ = {
         // Properties
         attributes : {},
