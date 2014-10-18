@@ -9,9 +9,7 @@
     'use strict';
 
     var VERSION = "0.1.1";
-
     var guid = 1;
-
     // Makes _.create() faster
     if (!Object.create) {
         var CachedFunction = function(){};
