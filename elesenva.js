@@ -7,7 +7,6 @@
 
 (function() {
     'use strict';
-
     var VERSION = "0.1.1";
     var guid = 1;
     // Makes _.create() faster
@@ -21,7 +20,6 @@
     var _ = {
         // Properties
         attributes : {},
-
         eventHandlers : {
             "-1" : {} // '-1' is used for the global event handling
         },
@@ -35,7 +33,6 @@
             if (!_.eventHandlers[event.guid][event.type]) {
                 _.eventHandlers[event.guid][event.type] = [];
             }
-
             // Push an event object
             _.eventHandlers[event.guid][event.type].push({
                 "guid" : event.guid,
